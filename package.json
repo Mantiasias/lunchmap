@@ -21,15 +21,20 @@
     "express": "^4.14.0",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.16.2",
+    "moment": "^2.18.1",
+    "moment-timezone": "^0.5.13",
+    "prop-types": "^15.5.10",
     "pug": "^2.0.0-beta5",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
     "react-hot-loader": "^1.3.0",
+    "react-moment": "^0.2.4",
     "react-redux": "^4.4.5",
     "react-router": "^2.6.1",
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0",
-    "stylus": "^0.54.5"
+    "stylus": "^0.54.5",
+    "yandex-map-react": "^1.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",

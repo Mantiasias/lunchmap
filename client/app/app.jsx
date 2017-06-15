@@ -1,4 +1,5 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 if (global.IS_BROWSER) {
   require('./app.styl');
@@ -12,8 +13,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <div>App: <hr /></div>
+      <div className=''>
         {this.props.children}
       </div>
     );
