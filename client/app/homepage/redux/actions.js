@@ -1,5 +1,6 @@
 export const HOMEPAGE_ACTIONS = {
-  CREATE_RECALL: 'APP_ACTIONS_CREATE_RECALL'
+  CREATE_RECALL: 'APP_ACTIONS_CREATE_RECALL',
+  CREATE_SHEBANG: 'APP_ACTIONS_CREATE_SHEBANG'
 };
 
 export function appActionsCreateRecall(recall) {
@@ -7,6 +8,15 @@ export function appActionsCreateRecall(recall) {
     dispatch({
       type: HOMEPAGE_ACTIONS.CREATE_RECALL,
       payload: {recall}
+    });
+  };
+}
+
+export function appActionsCreateShebang(shebangModel) {
+  return (dispatch) => {
+    dispatch({
+      type: HOMEPAGE_ACTIONS.CREATE_SHEBANG,
+      payload: {shebangModel}
     });
   };
 }

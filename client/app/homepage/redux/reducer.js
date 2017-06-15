@@ -52,15 +52,26 @@ const initialState = {
       shebangId: 3
     }
   ],
-  limit: 1
+  limit: 1,
+  addShebangForm: {
+    name: '',
+    address: '',
+    rating: 0
+  },
+  addRecallForm: {
+    text: '',
+    recallSign: 0,
+    visitDate: moment({}).format('YYYY MM DD'),
+    shebangId: null
+  }
 };
 
 export default function homepageState(_state_ = initialState, action) {
   let state = Object.assign({}, _state_), payload = action.payload;
 
   switch (action.type) {
-    case HOMEPAGE_ACTIONS:
-      state[payload] = true;
+    case HOMEPAGE_ACTIONS.CREATE_RECALL:
+      state.shebangList.push(...payload);
       return state;
 
     default:

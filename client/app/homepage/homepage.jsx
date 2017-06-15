@@ -11,6 +11,7 @@ if (global.IS_BROWSER) {
 // import Components
 import ShebangList from '../../component/shebangList/shebangList';
 import ShebangAddForm from '../../component/shebangAddForm/shebangAddForm';
+import AddRecallForm from '../../component/addRecallForm/addRecallForm';
 
 const propTypes = {
   shebangList: PropTypes.array,
@@ -21,6 +22,7 @@ const propTypes = {
 class Homepage extends Component {
   constructor(props) {
     super(props);
+    console.log()
   }
 
   static onClickShebangHandler() {
@@ -58,6 +60,7 @@ class Homepage extends Component {
             />
           </div>
           <div className='col-sm-4 col-md-4 col-lg-4'>
+            <AddRecallForm homePageActions={homePageActions}/>
             <ShebangAddForm homePageActions={homePageActions}/>
           </div>
         </div>
