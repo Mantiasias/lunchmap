@@ -25,7 +25,6 @@ class FirstRecall extends Component {
   }
   render() {
     let {recall} = this.props;
-    console.log(recall);
     return (
       <p className='push-bit recall-text'>{recall.visitDate}: {recall.text.substr(0, 100)}</p>
     );

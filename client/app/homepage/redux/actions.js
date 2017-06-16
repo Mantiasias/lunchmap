@@ -14,9 +14,11 @@ export function appActionsCreateRecall(recall) {
 
 export function appActionsCreateShebang(shebangModel) {
   return (dispatch) => {
+    console.log('dispathc!!!');
+    console.log(shebangModel);
     dispatch({
       type: HOMEPAGE_ACTIONS.CREATE_SHEBANG,
-      payload: {shebangModel}
+      payload: shebangModel
     });
   };
 }

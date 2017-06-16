@@ -70,8 +70,9 @@ export default function homepageState(_state_ = initialState, action) {
   let state = Object.assign({}, _state_), payload = action.payload;
 
   switch (action.type) {
-    case HOMEPAGE_ACTIONS.CREATE_RECALL:
-      state.shebangList.push(...payload);
+    case HOMEPAGE_ACTIONS.CREATE_SHEBANG:
+      state.shebangList.push(payload);
+      console.log(state);
       return state;
 
     default:

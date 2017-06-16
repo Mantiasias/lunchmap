@@ -13,7 +13,6 @@ class ShebangAddForm extends Component {
   }
 
   handleSubmit(shebang) {
-    console.log(this.props.homePageActions);
     this.props.homePageActions.appActionsCreateShebang(shebang);
   }
 
@@ -30,7 +29,7 @@ class ShebangAddForm extends Component {
             <div className='form-group'>
               <label className='col-md-3 control-label'>Add shebang form</label>
               <div className='col-md-9'>
-                <Control.textarea rows='9'
+                <Control.textarea rows='3'
                                   model='.text'
                                   className='form-control required'
                                   placeholder='KFC...'/>
