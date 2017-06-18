@@ -9,6 +9,7 @@ class FirstRecall extends Component {
   constructor(props) {
     super(props);
   }
+
   updateList() {
     // @todo service to update shebang list
     // $.ajax({
@@ -23,10 +24,13 @@ class FirstRecall extends Component {
     //   }
     // });
   }
+
   render() {
     let {recall} = this.props;
     return (
-      <p className='push-bit recall-text'>{recall.visitDate}: {recall.text.substr(0, 100)}</p>
+      <p
+        className='push-bit recall-text'>{recall ? recall.visitDate + ' : ' + recall.text.substr(0, 100) : 'No recalls'}
+      </p>
     );
   }
 }

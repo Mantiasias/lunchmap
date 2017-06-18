@@ -30,7 +30,7 @@ class ShebangAddForm extends Component {
               <label className='col-md-3 control-label'>Add shebang form</label>
               <div className='col-md-9'>
                 <Control.textarea rows='3'
-                                  model='.text'
+                                  model='.name'
                                   className='form-control required'
                                   placeholder='KFC...'/>
               </div>

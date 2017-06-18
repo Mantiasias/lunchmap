@@ -16,12 +16,14 @@ import AddRecallForm from '../../component/addRecallForm/addRecallForm';
 const propTypes = {
   shebangList: PropTypes.array,
   recallList: PropTypes.array,
-  limit: PropTypes.number
+  limit: PropTypes.number,
+  homePageActions: PropTypes.object
 };
 
 class Homepage extends Component {
   constructor(props) {
     super(props);
+    this.props.homePageActions.getAppInitialData();
   }
 
   static onClickShebangHandler() {
@@ -29,6 +31,7 @@ class Homepage extends Component {
   }
 
   render() {
+    console.log(this.props);
     let {shebangList, recallList, limit} = this.props;
     return (
       <div className='homepage'>
@@ -59,8 +62,8 @@ class Homepage extends Component {
             />
           </div>
           <div className='col-sm-4 col-md-4 col-lg-4'>
-            <AddRecallForm homePageActions={homePageActions}/>
-            <ShebangAddForm homePageActions={homePageActions}/>
+            <AddRecallForm homePageActions={this.props.homePageActions}/>
+            <ShebangAddForm homePageActions={this.props.homePageActions}/>
           </div>
         </div>
       </div>
